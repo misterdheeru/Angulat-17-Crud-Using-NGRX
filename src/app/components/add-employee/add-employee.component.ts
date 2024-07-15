@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { addstudent } from '../../STATE-MANAGEMENT/ACTIONS/Employee.Actions';
-import { STUDENTS } from '../../../MODEL/Employeees.Model';
+import { STUDENTS } from '../../MODEL/Employeees.Model';
+ 
 
 @Component({
   selector: 'app-add-employee',

@@ -1,8 +1,9 @@
 import { createReducer, on } from "@ngrx/store";
  
 import {  addstudent, deleteStudent, getsingleuser, savestudents, setemployees } from "../ACTIONS/Employee.Actions";
-import {  STUDENTS } from "../../../MODEL/Employeees.Model";
+ 
 import { state } from "@angular/animations";
+import { STUDENTS } from "../../MODEL/Employeees.Model";
 
 export interface student  
 {

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { addstudent, deleteStudent, getemployees, getsingleuser } from '../../STATE-MANAGEMENT/ACTIONS/Employee.Actions';
-import { STUDENTS } from '../../../MODEL/Employeees.Model';
+import { STUDENTS } from '../../MODEL/Employeees.Model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AddEmployeeComponent } from '../add-employee/add-employee.component';
