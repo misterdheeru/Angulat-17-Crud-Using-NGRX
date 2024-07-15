@@ -15,10 +15,10 @@ import { AddEmployeeComponent } from '../add-employee/add-employee.component';
 })
 export class EmployeesComponent  implements OnInit{
 
-  singleuser:any
+  singleuser:any [] = []
   constructor(private store : Store<any>)
   {
-  
+   
   }
   students:STUDENTS [] = []
   ngOnInit(): void {
