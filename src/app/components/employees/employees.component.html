@@ -1,0 +1,132 @@
+ <style>
+    input[type="text"],input[type="number"]
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+       font-weight: bold;
+        padding: 8px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+       
+        padding: 40px;
+        background-color:bisque;
+        width:300px;
+
+    }
+    button{
+        padding: 10px;
+        background-color: tomato;
+        color: white;
+        border: 0px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    button:active{
+        background-color: rgb(158, 24, 0);
+    }
+ 
+table, td, th {  
+    background-color: aqua;
+  text-align: left;
+ 
+}
+.container-flud{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+table {
+  border-collapse: collapse;
+ width: 800px;
+}
+td{
+    color: black;
+    padding: 15px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 20px;
+    text-align: center;
+}
+
+th {
+    background-color: bisque;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 20px;
+    color: rgb(55, 0, 255);
+    padding: 15px;
+    text-align: center;
+  
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+.Cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+ .background-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 900px;
+    background: linear-gradient(24deg, #19dfbf, #1e57cc);
+ 
+    align-content: center;
+}
+ 
+ .cover{
+    border: 0px;
+    height: 100vh;
+    box-shadow: 0px 6px 10px 3px #141313;
+    width: 500px;
+    padding: 30px;
+    background-color: rgb(67, 40, 6);
+}
+
+
+ 
+ </style>
+
+  <div class="background-container">
+    <div>
+        <div class="Cont"> 
+            <table>
+               <thead>
+                   <tr>
+                       <th>ID</th>
+                       <th>NAME</th>
+                       <th>COURSE</th>
+                       <th>ACTION</th>
+                   </tr>        
+               </thead>
+               <tbody  *ngFor="let DATA of students">
+                   <tr>
+                       <td>{{DATA.StdId}}</td>
+                       <td>{{DATA.StdName}}</td>
+                       <td>{{DATA.CourseName}}</td>
+                       <td>
+                           <button (click)="delete(DATA.StdId)">Delete</button>
+                           &nbsp;
+                           <button (click)="update(DATA.StdId)">Update</button>
+                       </td>
+                   </tr>
+               </tbody>
+            </table>
+            </div>
+           
+            <br>
+            <br>
+            <br>
+             
+          <app-add-employee></app-add-employee>
+    </div>
+  </div>

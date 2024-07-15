@@ -1,0 +1,57 @@
+<style>
+        button{
+        padding: 10px;
+        background-color: tomato;
+        color: white;
+        border: 0px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    button:active{
+        background-color: rgb(158, 24, 0);
+    }
+ 
+    input[type="text"],input[type="number"]
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+       font-weight: bold;
+        padding: 8px;
+    }
+    .container-flud{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.container{
+        display: flex;
+        flex-direction: column;
+       
+        padding: 40px;
+        background-color:bisque;
+        width:300px;
+
+    }
+</style>
+<div class="container-flud">
+    <div class="container">
+        <h1>EMPLOYEE FORM</h1>
+    
+     Id :
+     <br>
+     <input type="number" #id>
+     <br>
+     Name:
+     <br>
+     <input type="text" #name>
+     <br>
+     course :
+     <br>
+     <input type="number" #cid>
+     <br>
+     <br>
+     <button (click)="add()">Add Record</button>
+    
+      </div>
+  </div>
