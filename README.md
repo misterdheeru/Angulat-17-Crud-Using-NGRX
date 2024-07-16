@@ -18,6 +18,27 @@ ng add @ngrx/effects
 - `ng add @ngrx/store`: This creates the NGRX store and implements some automatic imports.
 - `ng add @ngrx/effects`: This sets up HTTP actions and implements some automatic imports.
 
+
+
+## Configuration
+
+1. Go to `app.config.ts` folder.
+2. In the `appConfig` class, add:
+
+```typescript
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { employeeReducer } from './path-to-reducer';
+import { employeesEffect } from './path-to-effect';
+
+importProvidersFrom(StoreModule.forRoot({
+   Employee: employeeReducer
+}));
+
+importProvidersFrom(EffectsModule.forRoot([employeesEffect]));
+```
+
+
 ## Predefined Methods
 
 ### Store
@@ -152,24 +173,6 @@ To generate new components and other elements, use:
 ```bash
 ng generate component component-name
 ng generate directive|pipe|service|class|guard|interface|enum|module
-```
-
-## Build Configuration
-
-1. Go to `app.config.ts` folder.
-2. In the `appConfig` class, add:
-
-```typescript
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { employeeReducer } from './path-to-reducer';
-import { employeesEffect } from './path-to-effect';
-
-importProvidersFrom(StoreModule.forRoot({
-   Employee: employeeReducer
-}));
-
-importProvidersFrom(EffectsModule.forRoot([employeesEffect]));
 ```
 
 ## Running End-to-End Tests
