@@ -69,7 +69,7 @@ export class EmployeeEffect {
         this.service
           .savesingl(action.STUDENTID, action.STUDENTS)
           .pipe(map((res: any) => setselectedstudent({ STUDENTS: res })),
-          map(()=>getemployees())
+           map(()=>getemployees())
         )
       )
     )

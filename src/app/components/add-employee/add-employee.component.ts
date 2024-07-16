@@ -58,9 +58,9 @@ export class AddEmployeeComponent implements OnInit {
       CourseName: '',
     };
        this.store.dispatch(savestudents({STUDENTID: this.ID.nativeElement.value,STUDENTS:Data}))
-       this.ID.nativeElement.value=""
-       this.NAME.nativeElement.value=""
-     
+    
+       
+
   }
 
 

@@ -4,7 +4,7 @@ NGRX is a framework for building reactive applications in Angular, inspired by R
 
 ## Why NGRX?
 
-When you have various types of relationships between components, transferring data can become complex and time-consuming. Component communication using traditional methods can be tedious and require a lot of logic. NGRX simplifies this by using a centralized store to manage state, allowing easy data sharing between components via the `store.select("")` method.
+NGRX helps make apps easier to manage by keeping all the data in one central place called a store. This way, when different parts of the app need to share data, they don't have to talk to each other directly, which can get complicated. Instead, they can just get the data they need from the store using a simple method. This makes the app cleaner and less messy, saving time and effort.
 
 ## Installation
 
