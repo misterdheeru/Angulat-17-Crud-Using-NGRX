@@ -18,8 +18,6 @@ ng add @ngrx/effects
 - `ng add @ngrx/store`: This creates the NGRX store and implements some automatic imports.
 - `ng add @ngrx/effects`: This sets up HTTP actions and implements some automatic imports.
 
-
-
 ## Configuration
 
 1. Go to `app.config.ts` folder.
@@ -38,6 +36,9 @@ importProvidersFrom(StoreModule.forRoot({
 importProvidersFrom(EffectsModule.forRoot([employeesEffect]));
 ```
 
+## State Management Lifecycle
+
+![State Management Lifecycle](https://v8.ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
 
 ## Predefined Methods
 
@@ -173,10 +174,4 @@ To generate new components and other elements, use:
 ```bash
 ng generate component component-name
 ng generate directive|pipe|service|class|guard|interface|enum|module
-```
-
-## Running End-to-End Tests
-
-Run `ng e2e` to execute end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
  
