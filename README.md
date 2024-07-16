@@ -16,24 +16,6 @@ ng add @ngrx/store  and  ng add @ngrx/effects
 ng add @ngrx/store    : It is going to create Ngrx store and  it will implement some automatic imports when we use ng add
 ng add @ngrx/effects  : It is Going to perform http actions  and   it will implement some automatic imports when we use ng add
 
-## CONFIGURATION
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-1. We Need TO Go To app.config.ts Folder 
-2. And Go To appConfig Class Add 
-
-importProvidersFrom(StoreModule.forRoot({
-   Employee:employeeReducer //it should be in array of object formate key Value formate
-  }))
-
-importProvidersFrom(EffectsModule.forRoot([employeesEffect])) 
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## PREDEFINE METHODS 
 
@@ -165,3 +147,21 @@ mergeMap(() =>
 
 ## Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+## CONFIGURATION
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+1. We Need TO Go To app.config.ts Folder 
+2. And Go To appConfig Class Add 
+
+importProvidersFrom(StoreModule.forRoot({
+   Employee:employeeReducer //it should be in array of object formate key Value formate
+  }))
+
+importProvidersFrom(EffectsModule.forRoot([employeesEffect])) 
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
