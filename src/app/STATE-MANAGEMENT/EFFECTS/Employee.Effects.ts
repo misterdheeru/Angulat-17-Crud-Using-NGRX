@@ -68,7 +68,9 @@ export class EmployeeEffect {
       mergeMap((action) =>
         this.service
           .savesingl(action.STUDENTID, action.STUDENTS)
-          .pipe(map((res: any) => setselectedstudent({ STUDENTS: res })))
+          .pipe(map((res: any) => setselectedstudent({ STUDENTS: res })),
+          map(()=>getemployees())
+        )
       )
     )
   );

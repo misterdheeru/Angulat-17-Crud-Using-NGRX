@@ -50,6 +50,7 @@
     <input type="number" #cid />
     <br />
     <br />
-    <button (click)="add()">Add Record</button>
+    <button (click)="add()" [hidden]="addrecord">Add Record</button>
+    <button (click)="saveUpdatedDetails()" [hidden]="saveHidden">Save Updated Details</button>
   </div>
 </div>
